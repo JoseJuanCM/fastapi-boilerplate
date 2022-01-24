@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: ./compose/local/fastapi/Dockerfile
+    image: fastapi_local
+    container_name: fastapi-local
+    volumes:
+      - ./app/:/code:z
+    ports:
+      - "8000:8000"
+    command: /start
