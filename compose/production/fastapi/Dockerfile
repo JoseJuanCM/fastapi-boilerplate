@@ -12,3 +12,5 @@ RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start
 
 COPY ./app /code/app
+
+RUN export FASTAPI_HOSTNAME
